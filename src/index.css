@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,600;0,700;0,900;1,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --pink: #E280FF;
+  --gray: #81836C;
+  --light-gray: #E4E5DE;
+  --yellow: #FFF804;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 2.25rem;
+  --text-3xl: 2.75rem;
+  --text-4xl: 3rem;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --text-sm: 0.875rem;
+    --text-md: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.75rem;
+    --text-2xl: 2.5rem;
+    --text-3xl: 4rem;
+    --text-4xl: 4.375rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:'Qratesis', 'Noto Sans JP', sans-serif;
+}
+
+.stroke {
+  -webkit-text-stroke: 1px var(--black);
+}
+
+
+.background-on-hover:hover::after, .default-image::after {
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  overflow: hidden;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+
+.link::after {
+  content: '';
+  color: black;
+  width: 0;
+  height: 11px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  background-size: cover;
+  background-position: left ;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url("src/assets/Home\ Page/underline.png");
+}
+
+
+.link:hover::after{
+  width: 100%;
+}
+
+.grid {
+  --line-offset: calc(var(--gap) / 2);
+  --line-thickness: 5px;
+  --line-color: var(--black);
+  
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   overflow: hidden;
+}
+
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.grid__item {
+  position: relative;
+}
+
+.grid__item::before, 
+.grid__item::after {
+   content: '';
+   position: absolute;
+   background-color: var(--line-color);
+   z-index: 1;
+}
+
+.grid__item::after {
+  inline-size: 100vw;
+  block-size: var(--line-thickness);
+  inset-inline-start: 0;
+  inset-block-start: calc(var(--line-offset) * -1);
+}
+
+.grid__item::before {
+  inline-size: var(--line-thickness);
+  block-size: 100vh;
+  inset-inline-start: calc(var(--line-offset) * -1);
+}
