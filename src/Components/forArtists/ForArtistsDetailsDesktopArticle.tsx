@@ -4,7 +4,7 @@ import ForArtistsDetailsArticle from './ForArtistsDetailsArticle'
 
 interface ForArtistsDetailsDesktopArticleProps {
   number: number
-  youArticle: ForArtistDetailsType & {number: number}
+  youArticle: ForArtistDetailsType & {number?: number}
   qratesArticle: ForArtistDetailsType
 }
 
