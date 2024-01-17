@@ -21,7 +21,7 @@ const ArtistsImageGrid = () => {
   ]
 
   return (
-    <section className='w-full h-auto grid grid-cols-2'>
+    <section className='w-full h-auto image-grid grid-cols-2'>
       {
         artistImages.map((image, index) => (
           <img src={image} alt="image of artist holding vinyl" key={index} className='border-[1px] border-black relative grid__item'/>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,600;0,700;0,900;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,10 +7,11 @@
 :root {
   --black: #000000;
   --white: #ffffff;
-  --pink: #E280FF;
+  --pink: #F8D8D8;
   --gray: #81836C;
   --light-gray: #E4E5DE;
   --yellow: #FFF804;
+  --orange: rgb(255, 103, 17);
   --text-sm: 0.875rem;
   --text-md: 1rem;
   --text-lg: 1.125rem;
@@ -38,7 +39,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family:'Qratesis', 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .stroke {
@@ -59,9 +67,6 @@
   background-repeat: no-repeat;
 }
 
-
-
-
 .link::after {
   content: '';
   color: black;
@@ -78,12 +83,11 @@
   background-image: url("src/assets/Home\ Page/underline.png");
 }
 
-
 .link:hover::after{
   width: 100%;
 }
 
-.grid {
+.image-grid {
   --line-offset: calc(var(--gap) / 2);
   --line-thickness: 5px;
   --line-color: var(--black);
@@ -94,7 +98,7 @@
 }
 
 @media (min-width: 720px) {
-  .grid {
+  .image-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -122,4 +126,14 @@
   inline-size: var(--line-thickness);
   block-size: 100vh;
   inset-inline-start: calc(var(--line-offset) * -1);
+}
+
+.gray-yellow-bg {
+  background: rgb(228,229,222);
+  background: linear-gradient(90deg, rgba(228,229,222,1) 50%, rgba(255,248,4,1) 50%);
+}
+
+.artists-details-articles-grid {
+  display: grid;
+  grid-template-columns: 1fr 50px 50px 1fr;
 }

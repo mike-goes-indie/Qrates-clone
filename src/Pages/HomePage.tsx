@@ -7,8 +7,9 @@ import TryItNowSection from '../Components/TryItNowSection'
 import ArtistsImageGrid from '../Components/ArtistsImageGrid'
 
 const HomePage = () => {
+  
   return (
-    <div className=''>
+    <>
       <TopArtistSectionMobile />
       <TopArtistSectionDesktop />
       <ForFansHomepageSection />
@@ -16,7 +17,7 @@ const HomePage = () => {
       <ArtistToolkitSection />
       <TryItNowSection />
       <ArtistsImageGrid />
-    </div>
+    </>
   )
 }
 

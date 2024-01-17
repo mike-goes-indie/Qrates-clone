@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer className='bg-black w-full px-[4%] pt-[26px] lg:pt-[78px] lg:pr-[60px] lg:pb-[84px] lg:pl-[64px] pb-[32px] text-white'>
-      <div className='grid grid-cols-2'>
+      <div className='grid grid-cols-2 lg:grid-cols-4'>
         {
           footerLinks.map((el, index) => (
             <FooterLinks key={index} heading={el.heading} links={el.links} />

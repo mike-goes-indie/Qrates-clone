@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import QratesLogo from '../assets/For Fans/qrates-logo-6b1bd403.svg'
 import menuIcon from '../assets/Home Page/mobile-menu.svg'
 import NavBar from './NavBar'
@@ -6,12 +6,26 @@ import MobileMenu from './MobileMenu'
 import searchIcon from '../assets/Home Page/search-icon.svg'
 import cartIcon from '../assets/Home Page/cart-icon.svg'
 import Button from './Button'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState<boolean>(false)
+
+  useEffect(() => {
+    if(isMobileMenuActive){
+      document.body.style.overflowY = "hidden"
+      document.body.style.overflowX = "hidden"
+    }
+    else {
+      document.body.style.overflowY = "scroll"
+      document.body.style.overflowX = "hidden"
+    }
+  }, [ isMobileMenuActive ])
   return (
     <header className='flex px-5 lg:px-8 items-center w-screen h-[65px] lg:h-[100px]'>
-      <img src={QratesLogo} alt="Qrates logo" className='w-[30px] lg:w-[40px]' />
+      <Link to={"/"}>
+        <img src={QratesLogo} alt="Qrates logo" className='w-[30px] lg:w-[40px]' />
+      </Link>
       <NavBar visibility='hidden lg:flex'/>
       <div className="flex ml-auto items-center lg:ml-[20px]">
         <img src={searchIcon} alt="search"  className='w-[35px] mr-[20px] lg:w-[22px]'/>

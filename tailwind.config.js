@@ -13,6 +13,7 @@ export default {
         lightGray: "var(--light-gray)",
         gray: "var(--gray)",
         yellow: "var(--yellow)",
+        orange: "var(--orange)"
       },
       fontSize: {
         sm: "var(--text-sm)",

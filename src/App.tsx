@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ForArtists from './Pages/ForArtists'
 import ForFans from './Pages/ForFans'
