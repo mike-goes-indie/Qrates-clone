@@ -22,7 +22,7 @@ const IntroSectionTop = () => {
   }, [])
   
   return (
-    <section className='text-white bg-black py-[34px] lg:pb-[10%] lg:pt-[80px]'>
+    <section className='text-white overflow-hidden lg:overflow-auto bg-black py-[34px] lg:pb-[10%] lg:pt-[80px]'>
       <div className='flex flex-col lg:flex-row w-full '>
         <div className='p-[3%] lg:pr-[4%] lg:pl-[30px] lg:pt-0 lg:w-[50%]'>
           <HeadingEnclosedInABox label='for artists' styles='mb-[34px]'/>

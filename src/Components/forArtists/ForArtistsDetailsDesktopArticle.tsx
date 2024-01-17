@@ -3,8 +3,9 @@ import ForArtistsDetailsArrow from './ForArtistsDetailsArrow'
 import ForArtistsDetailsArticle from './ForArtistsDetailsArticle'
 
 interface ForArtistsDetailsDesktopArticleProps {
-  youArticle: ForArtistDetailsType
-  ForArtistDetailsType: ForArtistDetailsType
+  number: number
+  youArticle: ForArtistDetailsType & {number: number}
+  qratesArticle: ForArtistDetailsType
 }
 
 const ForArtistsDetailsDesktopArticle = ({ number, youArticle, qratesArticle }: ForArtistsDetailsDesktopArticleProps) => {

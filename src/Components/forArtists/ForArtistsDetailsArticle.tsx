@@ -1,16 +1,15 @@
 import { ReactElement} from 'react'
 import ForArtistsDetailsArrow from './ForArtistsDetailsArrow'
-import { ArticleType } from '../../data/ForArtists/forArtistsDetailsArticles'
 import { Link } from 'react-router-dom'
 import Button from '../Button'
 
 
-
+type article = {content: string, heading: string} | string
 
 export interface ForArtistsDetailsArticleProps {
   number?: number
   heading: string
-  articles: ArticleType[] | string
+  articles: article[]
   image?: string
   styles?: string
 }
@@ -23,7 +22,7 @@ const ForArtistsDetailsArticle = ({ number, heading, articles, styles}: ForArtis
         { heading && <h4 className='text-xl font-bold leading-[24px] lg:leading-[34px] mb-[10px] tracking-[0.37px] w-full' >{ heading }</h4>}
         {
           articles?.map((article) => {
-            if(article.heading) return (
+            if(typeof article == "object" ) return (
               <>
                 <h5 className='text-lg font-bold leading-[24px] lg:leading-[34px] '>{ article.heading }</h5>
                 <p className='text-lg leading-[24px] -tracking-[0.37px] lg:-tracking-[0.27px] mb-[10px] lg:my-[10px] font-normal '> { article.content } </p>

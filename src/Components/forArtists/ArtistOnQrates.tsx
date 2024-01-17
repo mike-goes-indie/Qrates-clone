@@ -43,7 +43,7 @@ const ArtistOnQrates = ({ artist, numberOfArtists, index, currentArtistOnDisplay
         <div className="flex gap-2">
           {
             [...Array(numberOfArtists)].map((element, i) => (
-              <button className={`${index == i? "bg-black text-white": "bg-transparent border-2 border-black text-black"} w-[40px] aspect-square rounded-full `} key={i} onClick={() => setCurrentArtistOnDisplay(i)}>{i  + 1}</button>
+              <button className={`${index == i? "bg-black text-white": "bg-transparent border-2 border-black text-black"} w-[40px] aspect-square rounded-full `} key={element} onClick={() => setCurrentArtistOnDisplay(i)}>{i  + 1}</button>
             ))
           }
         </div>

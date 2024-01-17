@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 
 interface ForArtistsDetailsArrowProps {
-  number: number
+  number?: number
   styles?: string
 }
 

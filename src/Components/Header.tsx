@@ -22,7 +22,7 @@ const Header = () => {
     }
   }, [ isMobileMenuActive ])
   return (
-    <header className='flex px-5 lg:px-8 items-center w-screen h-[65px] lg:h-[100px]'>
+    <header className='flex px-5 bg-white z-10 overflow-y-hidden lg:px-8  items-center w-screen h-[65px] lg:h-[100px]'>
       <Link to={"/"}>
         <img src={QratesLogo} alt="Qrates logo" className='w-[30px] lg:w-[40px]' />
       </Link>
