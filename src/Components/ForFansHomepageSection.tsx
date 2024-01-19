@@ -1,29 +1,29 @@
-import { memo } from 'react'
 import SectionWithBackgroundChangeHoverEffect from './SectionWithBackgroundChangeHoverEffect'
 
-const ForFansHomepageSection = memo(() => {
+const ForFansHomepageSection = () => {
   const links = [
     {
       label: "Records",
-      styles: " hover:after:bg-[url('src/assets/background-hover-images/record-store.jpg')]"
+      styles: " hover:after:bg-[url('/background-hover-images/record-store.jpg')]"
     },
     {
       label: "Cassettes",
-      styles: "hover:after:bg-[url('src/assets/background-hover-images/cassetes.jpg')]"
+      styles: "hover:after:bg-[url('/background-hover-images/cassetes.jpg')]"
     },
     {
       label: "Stories",
-      styles: "hover:after:bg-[url('src/assets/background-hover-images/guy-with-his-eyes-closed.jpg')]"
+      styles: "hover:after:bg-[url('/background-hover-images/guy-with-his-eyes-closed.jpg')]"
     },
     {
       label: "Qrates curated",
-      styles: "hover:after:bg-[url('src/assets/background-hover-images/artist-in-studio.jpg')]"
+      styles: "hover:after:bg-[url('/background-hover-images/artist-in-studio.jpg')]"
     },
   ]
-
+  const defaultImage = `after:bg-[url('/background-hover-images/recordsPileUp.jpg')]`
+  
   return (
-    <SectionWithBackgroundChangeHoverEffect heading='for fans' defaultImage="after:bg-[url('src/assets/background-hover-images/recordsPileUp.jpg')]" navLinks={links} latest='Qrates community' />
+    <SectionWithBackgroundChangeHoverEffect heading='for fans' navLinks={links} latest='Qrates Community' defaultImage={defaultImage} />
   )
-})
+}
 
 export default ForFansHomepageSection

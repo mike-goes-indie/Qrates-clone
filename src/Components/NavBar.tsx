@@ -15,7 +15,7 @@ const NavBar = ({ visibility }: NavBarProps): ReactElement => {
   return (
     <nav className={`${visibility} flex flex-col lg:flex-row  w-full lg:w-auto h-fit lg:h-auto text-[30px] lg:text-md font-[700] lg:font-[600] pb-[35px] px-5 pt-6 lg:px-0 lg:pt-0 lg:pb-0 lg:ml-[3.2%]`}>
       <Dropdown dropdownLabel="discover music" styles='items-center gap-1 lg:gap-0 lg:mr-[15px] ' >
-        <div className='pl-5 flex flex-col font-semibold lg:bg-black lg:absolute lg:text-white lg:p-[20px] '>
+        <div className='pl-5 flex flex-col text-xl font- bold lg:bg-black lg:absolute lg:text-white lg:p-[20px] '>
           <a className='capitalize'>records</a>
           <a className='capitalize'>cassettes</a>
           <a className='capitalize'>stories</a>
