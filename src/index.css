@@ -80,7 +80,6 @@ html, body {
   background-position: left ;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-image: url("src/assets/Home\ Page/underline.png");
 }
 
 .link:hover::after{
