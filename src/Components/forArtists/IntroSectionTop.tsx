@@ -2,7 +2,6 @@ import HeadingEnclosedInABox from '../HeadingEnclosedInABox'
 import topSectionImage1 from '../../assets/For Artists/00bc2c69-9625-4bd3-a662-b9451150fe05_top_section_image_1.png'
 import topSectionImage2 from '../../assets/For Artists/8b532562-a28c-4e07-b2ab-1ddf0e2eaa91_top_section_image_2.png'
 import coinSlotIcon from '../../assets/For Artists/paid-42cd4b49.svg'
-import { useEffect, useState } from 'react'
 
 const IntroSectionTop = () => {
  
