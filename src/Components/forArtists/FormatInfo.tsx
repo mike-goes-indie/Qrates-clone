@@ -9,7 +9,7 @@ interface FormatInfoProps {
 
 const FormatInfo = ({ heading, children, image, border }: FormatInfoProps): ReactElement => {
   return (
-    <article className={`${ border } text-center border-t-2 border-t-black px-[15px] lg:px-[6%] pt-[30px] lg:pt-[50px] lg:pb-[70px] pb-[60px] `}>
+    <article className={`${ border } text-center w-1/2 border-t-2 border-t-black px-[15px] lg:px-[6%] pt-[30px] lg:pt-[50px] lg:pb-[70px] pb-[60px] `}>
       <h3 className='text-2xl capitalize w-full leading-[40px] tracking-[-1px] font-bold text-center mb-[30px]'>{heading}</h3>
       <p className='mb-[38px] text-lg leading-[24px] lg:leading-[28px] lg:tracking-[-.27px] max-w-[520px] mx-auto  '>
         { children }

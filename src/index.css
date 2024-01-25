@@ -7,7 +7,7 @@
 :root {
   --black: #000000;
   --white: #ffffff;
-  --pink: #F8D8D8;
+  --pink: rgb(248, 216, 216);
   --gray: #81836C;
   --light-gray: #E4E5DE;
   --yellow: #FFF804;
@@ -43,8 +43,8 @@
 }
 
 html, body {
-  width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -130,6 +130,10 @@ html, body {
 .gray-yellow-bg {
   background: rgb(228,229,222);
   background: linear-gradient(90deg, rgba(228,229,222,1) 50%, rgba(255,248,4,1) 50%);
+}
+
+.gray-pink-gradient {
+  background: linear-gradient(90deg, var(--gray) 50%, var(--pink) 50%);
 }
 
 .artists-details-articles-grid {

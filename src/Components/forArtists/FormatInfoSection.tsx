@@ -5,11 +5,11 @@ import cassette from '../../assets/For Artists/e6f25c1e-b82f-4279-8881-7cdff3f37
 const FormatInfoSection = () => {
 
   return (
-    <div className='bg-lightGray'>
+    <div className='bg-lightGray w-full'>
       <div className='mx-auto text-center w-[75%] lg:w-full py-[40px] lg:py-[90px]  '>
         <h2 className='text-2xl w-full leading-[40px] lg:leading-[42px] tracking-[-1px] lg:tracking-[-0.5px] font-bold'>Choose from two formats with promised quality</h2>
       </div>
-      <div className='flex flex-col lg:flex-row'>
+      <div className='flex flex-col w-full lg:flex-row'>
         <FormatInfo heading='vinyl' image={ vinyl } border='lg:border-r-[.5px]' >
           We know how special pressed records are to you. Our products are built for fans, by fans. We make it easy for artists to press vinyl, so the music you love can keep reaching ears in the most beautiful way.
         </FormatInfo >

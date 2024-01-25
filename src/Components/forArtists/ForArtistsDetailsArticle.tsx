@@ -16,7 +16,7 @@ export interface ForArtistsDetailsArticleProps {
 
 const ForArtistsDetailsArticle = ({ number, heading, articles, styles}: ForArtistsDetailsArticleProps): ReactElement => {
   return (
-    <div className={`grid min-h-[275px] p-[15px] lg:flex lg:flex-col lg:px-[90px] ${styles} lg:w-full`}>
+    <div className={`grid min-h-[275px] p-[15px] lg:flex lg:flex-col lg:px-[90px] ${styles} max-w-[770px] lg:h-full lg:w-full`}>
       <ForArtistsDetailsArrow number={number} styles='lg:hidden' />
       <div className='col-start-2 pl-[2.5%] col-end-5 flex flex-col w-full'>
         { heading && <h4 className='text-xl font-bold leading-[24px] lg:leading-[34px] mb-[10px] tracking-[0.37px] w-full' >{ heading }</h4>}

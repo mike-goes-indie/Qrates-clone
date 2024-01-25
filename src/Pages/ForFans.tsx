@@ -1,7 +1,9 @@
 
 const ForFans = () => {
   return (
-    <div>ForFans</div>
+    <div>
+      
+    </div>
   )
 }
 

@@ -22,14 +22,14 @@ const ForArtists = () => {
       <ForArtistsDetailsSectionMobile />
       <ForArtistsDetailsSectionDesktop />
       <StartANewProject />
-      <section className='lg:flex '>
-        <SupportDetailsSection image={artistPlayingKeyboard} background='bg-gray bg-' >
-          <DetailsIntro label='artist toolkit' heading='take you and your works to the next level' >
+      <section className='lg:flex w-full border-b-2  border-black gray-pink-gradient justify-center'>
+        <SupportDetailsSection image={artistPlayingKeyboard}  >
+          <DetailsIntro styles='justify-evenly min-h-[50vh]' label='artist toolkit' heading='take you and your works to the next level' >
             We have a lot of informations and tips about music production, physical format and music business for you.
           </DetailsIntro>
         </SupportDetailsSection>
-        <SupportDetailsSection image={personPuttingOnVinylRecord} background='bg-pink'>
-          <DetailsIntro label='customer support' heading="Here to help, whenever you need it." >
+        <SupportDetailsSection image={personPuttingOnVinylRecord} >
+          <DetailsIntro styles='justify-evenly min-h-[50vh]' label='customer support' heading="Here to help, whenever you need it." >
             Whether you’re an artist in the middle of product, or a fan with questions about your order; our team is here to help.
           </DetailsIntro>
         </SupportDetailsSection>

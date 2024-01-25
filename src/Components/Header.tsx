@@ -9,10 +9,11 @@ import Button from './Button'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
-  const [isMobileMenuActive, setIsMobileMenuActive] = useState<boolean>(false)
+  const [ isMobileMenuActive, setIsMobileMenuActive ] = useState<boolean>(false)
+  const [ windowSize, setWindowSize ] = useState<number>(window.innerWidth)
 
   useEffect(() => {
-    if(isMobileMenuActive){
+    if(isMobileMenuActive && windowSize >= 1024){
       document.body.style.overflowY = "hidden"
       document.body.style.overflowX = "hidden"
     }
@@ -21,6 +22,12 @@ const Header = () => {
       document.body.style.overflowX = "hidden"
     }
   }, [ isMobileMenuActive ])
+
+  useEffect(() => {
+    setWindowSize(window.innerWidth)
+  }, [ windowSize ])
+
+
   return (
     <header className='flex px-5 bg-white z-10 overflow-y-hidden lg:px-8  items-center w-screen h-[65px] lg:h-[100px]'>
       <Link to={"/"}>

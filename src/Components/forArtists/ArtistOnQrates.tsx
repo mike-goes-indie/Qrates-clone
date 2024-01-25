@@ -13,22 +13,12 @@ interface ArtistsOnQratesProps {
 
 const ArtistOnQrates = ({ artist, numberOfArtists, index, currentArtistOnDisplay, setCurrentArtistOnDisplay }: ArtistsOnQratesProps) => {
 
-  const artistOnQratesContainer = useRef(null)
-
-
-  useLayoutEffect(() => {
-  const artistOnQratesTransition = gsap.timeline()
-
-  artistOnQratesTransition.play()
-    
-  }, [currentArtistOnDisplay])
-
-  console.log(currentArtistOnDisplay)
+  
 
   return (
-    <div className={`${index == 0? "bg-yellow": "bg-orange -translate-x-full"} ${currentArtistOnDisplay == index? "z-[1] opacity-1": "z-[-1] opacity-0"}  flex flex-col relative lg:flex-row w-full shrink-0 justify-start duration-[600ms] items-stretch min-h-[100%]`} ref={artistOnQratesContainer}>
-      <a className='w-full align-baseline relative lg:order-2 max-w-[710px] lg:border-l-2 lg:border-l-black grow shrink basis-1/2 ' > 
-        <img src={artist.image} alt={artist.artist} className='mt-[30px] lg:mt-0 mx-auto w-[92%] lg:w-[100%] h-[535px] z-10 relative lg:h-[875px] border-2 border-black lg:border-none ' />
+    <div className={`${index == 0? "bg-yellow": "bg-orange -translate-x-full"} ${currentArtistOnDisplay == index? "z-[1] opacity-1": "z-[-1] opacity-0"}  flex flex-col relative lg:flex-row w-full shrink-0 xl:p-[50px] xl:justify-center justify-start duration-[600ms] items-stretch min-h-[100%]`} >
+      <a className='w-full align-baseline relative lg:order-2 max-w-[710px] lg:border-l-2 lg:border-l-black xl:border-l-none grow shrink basis-1/2 ' > 
+        <img src={artist.image} alt={artist.artist} className='mt-[30px] lg:mt-0 mx-auto w-[92%] lg:w-[100%] h-[535px] z-10 relative lg:h-[875px] border-2 border-black lg:border-none xl:border-2 object-cover' />
       </a>
       <div className='mt-[30px] relative mx-[15px] mb-[42px] basis-[50%] shrink grow flex flex-col justify-between max-w-[710px] lg:pt-[40px] lg:pr-[50px] lg:pb-[42px] lg:pl-[31px] ' >
         <HeadingEnclosedInABox label="artists on Qrates" styles='mb-[24px] bg-white leading-[14px]'/>

@@ -7,7 +7,7 @@ interface ForArtistsDetailsArrowProps {
 
 const ForArtistsDetailsArrow = ({ number, styles }: ForArtistsDetailsArrowProps): ReactElement=> {
   return (
-    <div className={`${styles} h-full w-full relative col-start-1 col-end-2 flex items-center flex-col`}>
+    <div className={`${styles} h-full w-full relative col-start-1 col-end-2  flex items-center flex-col`}>
       <div className='text-2xl lg:text-3xl font-bold bg-white text-center items-center justify-center flex rounded-full border-[3px] lg:border-[4px] border-black  w-[1.35em] h-[1.35em] '>
         <span>{ number }</span>
       </div>

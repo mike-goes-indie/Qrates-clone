@@ -50,7 +50,7 @@ const TryItNowSection = () => {
           {
             vinylSampleImages.map((image, index)=> { 
               return (
-                <div className={`relative w-[350px] ${image.translateValue} ${currentIndex === index? "opacity-1": "opacity-0"} h-auto flex-shrink-0`} key={index}>
+                <div className={`relative w-[100%] sm:w-[350px] ${image.translateValue} ${currentIndex === index? "opacity-1": "opacity-0"} h-auto flex-shrink-0`} key={index}>
                   <img src={image.img} alt="vinyl"  className='w-full relative block h-auto '/>
                 </div>
               )
